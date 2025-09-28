@@ -8,8 +8,13 @@ const Welcome = ({navigation}) => {
             <View style={styles.imgContainer}>
                 <Image source={require('../assets/us.png')} resizeMode='contain' style={styles.img}/>
             </View>
+            <View style={styles.textContainer}>
+            <Text style={styles.title}>Stay</Text>
+<Text style={[styles.title, styles.special]}>Connected</Text>
+<View style={styles.slantedLine}/>
+            </View>
             
-            <Text style={styles.title}>Stay Connected</Text>
+
             <Text style={styles.subText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus incidunt animi maxime modi? Illum voluptate aliquam iusto possimus eaque dolores ducimus cum architecto!</Text>
 
             <TouchableOpacity onPress={()=>navigation.navigate("Login")}>
@@ -37,6 +42,31 @@ container:{
 imgContainer:{
     width:300,
     height:300
+},
+
+textContainer:{
+    flexDirection:'row',
+    gap:5,
+    // backgroundColor:'green',
+    position:'relative'
+
+},
+
+slantedLine:{
+   width:'40%',
+   backgroundColor:'white',
+   height:2,
+   position:'absolute',
+   top:65,
+   left:'18%',
+   transform:[{'rotate':'-3deg'}]
+},
+
+
+special:{
+// backgroundColor:'red',
+paddingHorizontal:12,
+
 },
 
 content:{
