@@ -3,6 +3,20 @@
     "name": "my-app",
     "slug": "my-app",
     "version": "1.0.0",
+     "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera so you can take photos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location to show places near you."
+        }
+      ]
+    ],
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

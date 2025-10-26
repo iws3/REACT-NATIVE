@@ -41,7 +41,7 @@ const styles=StyleSheet.create(
             height:200,
             width:200,
             borderRadius:100,
-            borderColor:'teal',
+            borderColor:'teal ',
             borderWidth:5,
             elevation:4
         },

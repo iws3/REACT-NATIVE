@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons, MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
+import HomeScreen from './view/HomeScreen';
+import ClubScreen from './view/ClubScreen';
+import LeagueScreen from './view/LeaguesScreen';
 
-import HomeScreen from './screens/HomeScreen';
-import FoodsScreen from './screens/FoodsScreen';
-import ProfileScreen from './screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,12 +22,12 @@ export default function App() {
             if (route.name === 'Home') {
               return (
                 <Ionicons 
-                  name={focused ? 'leaf' : 'leaf-outline'} 
+                  name={focused ? 'home' : 'home-outline'} 
                   size={size} 
                   color={color} 
                 />
               );
-            } else if (route.name === 'Foods') {
+            } else if (route.name === 'leagues') {
               return (
                 <MaterialIcons 
                   name="restaurant-menu" 
@@ -35,27 +35,28 @@ export default function App() {
                   color={color} 
                 />
               );
-            } else if (route.name === 'Profile') {
+            } else if (route.name === 'clubs') {
               return (
                 <FontAwesome5 
-                  name={focused ? 'user-alt' : 'user'} 
+                  name={focused ? 'ball' : 'ball-outline'} 
                   size={size} 
                   color={color} 
                 />
               );
             }
           },
-          tabBarActiveTintColor: '#4CAF50',
-          tabBarInactiveTintColor: '#8E8E93',
+          tabBarActiveTintColor: '#950104ff',
+          tabBarInactiveTintColor: '#07078cff',
           tabBarStyle: {
             backgroundColor: '#FFFFFF',
             borderTopColor: '#EAEAEA',
             borderTopWidth: 1,
           },
           headerStyle: {
-            backgroundColor: '#1B5E20',
+            backgroundColor: '#ffffffff',
+            elevation:12
           },
-          headerTintColor: '#fff',
+          headerTintColor: '#000',
           headerTitleStyle: {
             fontWeight: 'bold',
             fontSize: 18,
@@ -66,19 +67,19 @@ export default function App() {
           name="Home" 
           component={HomeScreen}
           options={{ 
-            title: 'VeLi',
+            title: 'favPlayer',
             tabBarBadge: hasNotifications ? notificationCount : undefined,
           }}
         />
         <Tab.Screen 
-          name="Foods" 
-          component={FoodsScreen}
-          options={{ title: 'Vegetarian Foods' }}
+          name="clubs" 
+          component={ClubScreen}
+          options={{ title: 'Football Clubs' }}
         />
         <Tab.Screen 
-          name="Profile" 
-          component={ProfileScreen}
-          options={{ title: 'My Profile' }}
+          name="leagues" 
+          component={LeagueScreen}
+          options={{ title: 'Our Leagues' }}
         />
       </Tab.Navigator>
     </NavigationContainer>

@@ -1,13 +1,16 @@
 import { registerRootComponent } from 'expo';
 
 // import App from './App.js';
-import Counter from './Counter.jsx';
-import Wintro from './Wintro.jsx';
-import Test from './test.jsx';
-import Input from './input.jsx';
-import Grid from './Grid.jsx';
-import ListFlat from './FlatList.jsx';
-import App from './Tab2.jsx';
+import Layout from './Layout.jsx';
+// import PermissionScreen, { Camera } from './tutorial/Camera.jsx';
+import Data from './tutorial/Data.jsx';
+import List from './tutorial/FlatList.jsx';
+import Camera from './tutorial/Camera.jsx';
+import DimensionScreen from './tutorial/Dimension'
+import App from './MyLayout.jsx';
+// import App from './tutorial/Tab.jsx';
+// import { Dimensions } from 'react-native';
+
 
 
 

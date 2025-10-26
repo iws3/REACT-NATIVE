@@ -213,40 +213,43 @@ const MEMBERS_DATA = [
 ];
 
 
-export const vegetarianFoods = [
-  { 
-    id: 1, 
-    name: "Avocado Salad", 
-    primaryColor: "#2E7D32", // deep avocado green 
-    type: "Salad", 
-    image: require("./assets/foods/avocado.png") 
-  },
-  { 
-    id: 2, 
-    name: "Vegan Burger", 
-   primaryColor: "#e71414ff", // rich tomato red // earthy brown (bun-like, grounded) 
-    type: "Main Dish", 
-    image: require("./assets/foods/burger.png") 
-  },
-  { 
-    id: 3, 
-    name: "Quinoa Bowl", 
-    primaryColor: "#1B5E20", // dark leafy green 
-    type: "Bowl", 
-    image: require("./assets/foods/quinoa.png") 
-  },
-  { 
-    id: 4, 
-    name: "Veggie Pizza", 
-    primaryColor: "#e71414ff", // rich tomato red 
-    type: "Pizza", 
-    image: require("./assets/foods/pizza.png") 
-  },
-  { 
-    id: 5, 
-    name: "Green Smoothie", 
-    primaryColor: "#33691E", // forest green 
-    type: "Drink", 
-    image: require("./assets/foods/smoothie.png") 
-  },
-];
+export const data=Array.from({length:50}).map((_, i)=>({id:i.toString(), value:i+1}))
+
+
+// export const vegetarianFoods = [
+//   { 
+//     id: 1, 
+//     name: "Avocado Salad", 
+//     primaryColor: "#2E7D32", // deep avocado green 
+//     type: "Salad", 
+//     image: require("./assets/foods/avocado.png") 
+//   },
+//   { 
+//     id: 2, 
+//     name: "Vegan Burger", 
+//    primaryColor: "#e71414ff", // rich tomato red // earthy brown (bun-like, grounded) 
+//     type: "Main Dish", 
+//     image: require("./assets/foods/burger.png") 
+//   },
+//   { 
+//     id: 3, 
+//     name: "Quinoa Bowl", 
+//     primaryColor: "#1B5E20", // dark leafy green 
+//     type: "Bowl", 
+//     image: require("./assets/foods/quinoa.png") 
+//   },
+//   { 
+//     id: 4, 
+//     name: "Veggie Pizza", 
+//     primaryColor: "#e71414ff", // rich tomato red 
+//     type: "Pizza", 
+//     image: require("./assets/foods/pizza.png") 
+//   },
+//   { 
+//     id: 5, 
+//     name: "Green Smoothie", 
+//     primaryColor: "#33691E", // forest green 
+//     type: "Drink", 
+//     image: require("./assets/foods/smoothie.png") 
+//   },
+// ];
