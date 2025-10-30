@@ -1,86 +1,12 @@
-import React, { useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons, MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
+import React from 'react'
+import AppNavigator from './navigation/AppNavigation'
 
-import HomeScreen from './screens/HomeScreen';
-import FoodsScreen from './screens/FoodsScreen';
-import ProfileScreen from './screens/ProfileScreen';
-
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  const [hasNotifications, setHasNotifications] = useState(true);
-  const [notificationCount, setNotificationCount] = useState(5);
-
+const App = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Home"
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
-            if (route.name === 'Home') {
-              return (
-                <Ionicons 
-                  name={focused ? 'leaf' : 'leaf-outline'} 
-                  size={size} 
-                  color={color} 
-                />
-              );
-            } else if (route.name === 'Foods') {
-              return (
-                <MaterialIcons 
-                  name="restaurant-menu" 
-                  size={size} 
-                  color={color} 
-                />
-              );
-            } else if (route.name === 'Profile') {
-              return (
-                <FontAwesome5 
-                  name={focused ? 'user-alt' : 'user'} 
-                  size={size} 
-                  color={color} 
-                />
-              );
-            }
-          },
-          tabBarActiveTintColor: '#4CAF50',
-          tabBarInactiveTintColor: '#8E8E93',
-          tabBarStyle: {
-            backgroundColor: '#FFFFFF',
-            borderTopColor: '#EAEAEA',
-            borderTopWidth: 1,
-          },
-          headerStyle: {
-            backgroundColor: '#1B5E20',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            fontSize: 18,
-          },
-        })}
-      >
-        <Tab.Screen 
-          name="Home" 
-          component={HomeScreen}
-          options={{ 
-            title: 'VeLi',
-            tabBarBadge: hasNotifications ? notificationCount : undefined,
-          }}
-        />
-        <Tab.Screen 
-          name="Foods" 
-          component={FoodsScreen}
-          options={{ title: 'Vegetarian Foods' }}
-        />
-        <Tab.Screen 
-          name="Profile" 
-          component={ProfileScreen}
-          options={{ title: 'My Profile' }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
+    <>
+    <AppNavigator/>
+    </>
+  )
 }
+
+export default App
